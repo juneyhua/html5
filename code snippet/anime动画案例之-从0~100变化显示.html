@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+</head>
+<body>
+<span id="snum">1</span>
+<script>
+var snum = document.getElementById("snum");
+	
+	function ac(starNumber,toNumber,time){
+	anime({
+ 		targets: snum,
+ 		innerHTML: [starNumber, toNumber],   
+ 		easing: 'linear',      //贝塞尔动画曲线值   easeInCubic
+  		round: 1,              //间隔数1
+ 		duration:time           //时间速度
+		
+	});
+	
+	}
+	
+	
+	
+	n1=2000;
+	n2=2000;
+	
+	function add(){
+		n2=n2+87;    //一次递增87
+		ac(n1,n2,1000);    //持续1秒
+		n1=n2;
+		
+	}
+	
+	function numSpeed(){
+		n2=n2+1177;    //每次加速1177销量
+	}
+	
+	setInterval(add,"3000");  //每2秒递增一次
+	setInterval(numSpeed,"10000");    //每10秒加速一次销量
+
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       function clickCounter(){
+        localStorage.clickcount=Number(localStorage.clickcount)+1;
+		document.getElementById("result").innerHTML=" 点击了按钮 " + localStorage.clickcount + " 次 ";
+	}
+
+    </script>
+</head>
+<body>
+    <button onclick="clickCounter()" type="button">点击</button>
+    <span id="result">0</span>
+</body>
+</html>

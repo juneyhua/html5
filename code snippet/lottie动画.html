@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<!--  Meta  -->
+	<meta charset="UTF-8" />
+	<title>Bodymovin Demo</title>
+	<style>
+			#bm { 
+					width: 400px;
+					margin: 0 auto;
+			}
+	</style>
+</head>
+<body>
+	<!-- Our wrapper -->
+	<div id="bm">
+	
+	<!-- Scripts -->
+	<script src="lottie.min.js"></script>
+	<script>
+		var animation = bodymovin.loadAnimation({
+			container: document.getElementById('bm'),
+			renderer: 'svg', // 渲染方式:svg、canvas
+			loop: true,
+			autoplay: true,
+			path: 'data.json'
+		})
+		
+		
+		
+//		animation.play(); // 播放，从当前帧开始播放
+//
+//		animation.stop(); // 停止，并回到第0帧
+//
+//		animation.pause(); // 暂停，并保持当前帧
+//
+//		animation.goToAndStop(value, isFrame); // 跳到某个时刻/帧并停止isFrame(默认false)指示value表示帧还是时间(毫秒)
+//
+//		animation.goToAndPlay(value, isFrame); // 跳到某个时刻/帧并进行播放
+//
+//		animation.goToAndStop(30, true); // 跳转到第30帧并停止
+//
+//		animation.goToAndPlay(300); // 跳转到第300毫秒并播放
+//
+//		animation.playSegments(arr, forceFlag); // arr可以包含两个数字或者两个数字组成的数组，forceFlag表示是否立即强制播放该片段
+//
+//		animation.playSegments([10,20], false); // 播放完之前的片段，播放10-20帧
+//
+//		animation.playSegments([[0,5],[10,18]], true); // 直接播放0-5帧和10-18帧
+//
+//		animation.setSpeed(speed); // 设置播放速度，speed为1表示正常速度
+//
+//		animation.setDirection(direction); // 设置播放方向，1表示正向播放，-1表示反向播放
+//
+//		animation.destroy(); // 删除该动画，移除相应的元素标签等。在unmount的时候，需要调用该方法
+	</script>
+</body>
+</html>
